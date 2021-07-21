@@ -1,4 +1,4 @@
-import { Space,Tag } from 'antd';
+import { Space } from 'antd';
 import { QuestionCircleOutlined } from '@ant-design/icons';
 import React from 'react';
 import { useModel, SelectLang } from 'umi';
