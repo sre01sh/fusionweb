@@ -1,0 +1,21 @@
+<svg width="200" height="160" xmlns="http://www.w3.org/2000/svg">
+ <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+
+ <g>
+  <title>background</title>
+  <rect fill="#f20000" id="canvas_background" height="162" width="202" y="-1" x="-1"/>
+  <g display="none" overflow="visible" y="0" x="0" height="100%" width="100%" id="canvasGrid">
+   <rect fill="url(#gridpattern)" stroke-width="0" y="0" x="0" height="100%" width="100%"/>
+  </g>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <rect stroke="#000" transform="rotate(34.62421798706055 10.77030658721922,46.100021362304695) " id="svg_9" height="247.380978" width="111" y="-77.590476" x="-44.729695" stroke-width="0" fill="#fff"/>
+  <rect stroke="#000" transform="rotate(34.62421798706055 203.74206542968744,91.79676818847656) " id="svg_10" height="247.380978" width="111" y="-31.893738" x="148.240921" stroke-width="0" fill="#fff"/>
+  <line stroke-width="3" stroke-linecap="null" stroke-linejoin="null" id="svg_11" y2="71.939434" x2="200.157443" y1="71.308521" x1="-0.157443" stroke="#bebebe" fill="none"/>
+  <line stroke="#bebebe" transform="rotate(55.74923324584961 195.84864807128906,69.99341583251955) " stroke-linecap="null" stroke-linejoin="null" id="svg_14" y2="72.355826" x2="192.707704" y1="67.631027" x1="198.989596" fill-opacity="0" stroke-width="2" fill="none"/>
+  <text font-style="italic" xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="60" id="svg_4" y="100.990935" x="11.803226" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#000000">fusion</text>
+  <line stroke="#bebebe" transform="rotate(18.039743423461914 195.9567565917968,73.88531494140632) " stroke-linecap="null" stroke-linejoin="null" id="svg_17" y2="76.24771" x2="192.815813" y1="71.522911" x1="199.097705" fill-opacity="0" stroke-width="2" fill="none"/>
+  <path id="svg_18" d="m210.025134,69.59757l0.034281,-0.020639l-0.06628,0l-0.06628,0l0,-0.012776l0,-0.012776l0.06552,0c0.036036,0 0.06552,-0.000648 0.06552,-0.001439c0,-0.000791 -0.014346,-0.010079 -0.031879,-0.020639l-0.031879,-0.0192l0.029466,0l0.029466,0l0.045002,0.027053l0.045002,0.027053l-0.045088,0.027001l-0.045088,0.027001l-0.031021,0l-0.031021,0l0.034281,-0.020639l0,0z" fill-opacity="0" stroke-width="2" stroke="#bebebe" fill="none"/>
+ </g>
+</svg>

@@ -1,4 +1,4 @@
-import { Space } from 'antd';
+import { Space,Tag } from 'antd';
 import { QuestionCircleOutlined } from '@ant-design/icons';
 import React from 'react';
 import { useModel, SelectLang } from 'umi';
@@ -20,6 +20,12 @@ const GlobalHeaderRight = () => {
   if ((navTheme === 'dark' && layout === 'top') || layout === 'mix') {
     className = `${styles.right}  ${styles.dark}`;
   }
+
+  const ENVTagColor = {
+    dev: 'orange',
+    test: 'green',
+    pre: '#87d068',
+  };
 
   return (
     <Space className={className}>
@@ -58,7 +64,12 @@ const GlobalHeaderRight = () => {
       </span>
       <NoticeIconView />
       <Avatar menu />
-       
+   
+      {REACT_APP_ENV && (
+      <span>
+        <Tag color={ENVTagColor[REACT_APP_ENV]}>{REACT_APP_ENV}</Tag>
+      </span>
+    )}
       <SelectLang className={styles.action} />
     </Space>
   );
