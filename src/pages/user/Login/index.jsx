@@ -105,10 +105,6 @@ const Login = () => {
           <div size={60}>
            
               <span className={styles.title}  style={{fontSize: 100,color: 'red'}}><b>molex</b></span>
-              <img
-            src="/logo.svg"
- 
-          />
            
           </div>
           </Space>
