@@ -10,9 +10,9 @@ import { Alert, Space, message, Tabs } from 'antd';
 import React, { useState } from 'react';
 import ProForm, { ProFormCaptcha, ProFormCheckbox, ProFormText } from '@ant-design/pro-form';
 import { useIntl, Link, history, FormattedMessage, SelectLang, useModel } from 'umi';
-import Footer from '@/components/Footer';
 import { login } from '@/services/ant-design-pro/api';
 import { getFakeCaptcha } from '@/services/ant-design-pro/login';
+import ReactCanvasNest from 'react-canvas-nest';
 import styles from './index.less';
 
 const LoginMessage = ({ content }) => (
@@ -83,22 +83,37 @@ const Login = () => {
 
   const { status, type: loginType } = userLoginState;
   return (
-    <div className={styles.container}>
-      <div className={styles.lang} data-lang>
+    
+    <div className={styles.container} >
+
+<ReactCanvasNest className = 'canvasNest' config = {{ 
+        follow: true,
+        pointOpacity: 2,
+        pointColor: ' 16, 182, 167 ',
+        lineColor: ' 16, 182, 167 ',
+        dist: 18000,
+        }} style = {{ zIndex: 0 }} />
+     
+      <div className={styles.lang} data-lang style={{ color: 'white',zIndex: 1 }}>
         {SelectLang && <SelectLang />}
       </div>
-      <div className={styles.content}>
+      <div className={styles.content} style={{marginTop:250}}>
+    
+
         <div className={styles.top}>
-          <div className={styles.header}>
-            <Link to="/">
-              <img alt="logo" className={styles.logo} src="/logo.svg" />
-              <span className={styles.title}>Ant Design</span>
-            </Link>
+        <Space className={styles.other}>
+          <div size={60}>
+           
+              <span className={styles.title}  style={{fontSize: 100,color: 'red'}}><b>molex</b></span>
+              <img
+            src="/logo.svg"
+ 
+          />
+           
           </div>
+          </Space>
           <div className={styles.desc}>
-            {intl.formatMessage({
-              id: 'pages.layouts.userLayout.title',
-            })}
+             
           </div>
         </div>
 
@@ -111,8 +126,8 @@ const Login = () => {
               searchConfig: {
                 submitText: intl.formatMessage({
                   id: 'pages.login.submit',
-                  defaultMessage: '登录',
-                }),
+                  defaultMessage: '登录',}),
+                
               },
               render: (_, dom) => dom.pop(),
               submitButtonProps: {
@@ -127,22 +142,7 @@ const Login = () => {
               handleSubmit(values);
             }}
           >
-            <Tabs activeKey={type} onChange={setType}>
-              <Tabs.TabPane
-                key="account"
-                tab={intl.formatMessage({
-                  id: 'pages.login.accountLogin.tab',
-                  defaultMessage: '账户密码登录',
-                })}
-              />
-              <Tabs.TabPane
-                key="mobile"
-                tab={intl.formatMessage({
-                  id: 'pages.login.phoneLogin.tab',
-                  defaultMessage: '手机号登录',
-                })}
-              />
-            </Tabs>
+      
 
             {status === 'error' && loginType === 'account' && (
               <LoginMessage
@@ -286,32 +286,14 @@ const Login = () => {
                 />
               </>
             )}
-            <div
-              style={{
-                marginBottom: 24,
-              }}
-            >
-              <ProFormCheckbox noStyle name="autoLogin">
-                <FormattedMessage id="pages.login.rememberMe" defaultMessage="自动登录" />
-              </ProFormCheckbox>
-              <a
-                style={{
-                  float: 'right',
-                }}
-              >
-                <FormattedMessage id="pages.login.forgotPassword" defaultMessage="忘记密码" />
-              </a>
-            </div>
+             
           </ProForm>
-          <Space className={styles.other}>
-            <FormattedMessage id="pages.login.loginWith" defaultMessage="其他登录方式" />
-            <AlipayCircleOutlined className={styles.icon} />
-            <TaobaoCircleOutlined className={styles.icon} />
-            <WeiboCircleOutlined className={styles.icon} />
-          </Space>
+          
         </div>
+      
       </div>
-      <Footer />
+      <span style={{color:'grey',alignSelf: 'center',marginBottom: 10  }}>
+        &copy; 2021 Molex Manufacturing & Engineering Technology Integration Team</span>
     </div>
   );
 };
